@@ -23,8 +23,10 @@
     <sprite>sprites\sWallGibs</sprite>
     <sprite>sprites\sAssault</sprite>
     <sprite>sprites\sChest</sprite>
+    <sprite>sprites\sWall_new_new</sprite>
     <sprite>sprites\sprite17_sPistol_0</sprite>
     <sprite>sprites\sShotGun</sprite>
+    <sprite>sprites\sStone</sprite>
     <sprite>sprites\sprite19</sprite>
     <sprite>sprites\sprite23_grass14</sprite>
     <sprite>sprites\sprite27</sprite>
@@ -57,7 +59,7 @@
       <sprite>sprites\sFuelMachine</sprite>
       <sprite>sprites\sRock</sprite>
       <sprite>sprites\sprite43</sprite>
-      <sprite>sprites\sStone</sprite>
+      <sprite>sprites\sStoneOOD</sprite>
       <sprite>sprites\sWater</sprite>
       <sprite>sprites\sprite45</sprite>
       <sprite>sprites\sBackToStation</sprite>
@@ -66,6 +68,8 @@
     <sprite>sprites\sCoin</sprite>
     <sprite>sprites\sAxe</sprite>
     <sprite>sprites\sprite48</sprite>
+    <sprite>sprites\sprite57</sprite>
+    <sprite>sprites\sprite56</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -157,13 +161,14 @@
     <object>objects\oGasMeter</object>
     <object>objects\oBuyGas</object>
     <object>objects\oCoin</object>
+    <object>objects\oWalltest</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>
+    <room>rooms\room0</room>
     <room>rooms\rSpace</room>
     <room>rooms\rPlanet</room>
     <room>rooms\rStation</room>
-    <room>rooms\room0</room>
     <room>rooms\FuelStore</room>
   </rooms>
   <help>
