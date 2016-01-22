@@ -25,11 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//make player go to new room when you goto a bit that leaves the room
-//chests with stuff
-//other guns and stuff
-//enemys (with pathfinding)
+            <string>// //chests with stuff
+// //other guns and stuff
+// //enemys (with pathfinding)
 //art needs redoing
+
+//WATER
+//water needs to generate on some planets
+
+//scrap the station
+
+//make game into robot colonization rts kinna game idk
+
+
 </string>
           </argument>
         </arguments>

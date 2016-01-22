@@ -88,7 +88,20 @@ if y &lt; 0{ y = room_height }
 
 //add code to automatically stop
 
+if keyboard_check(ord('Z')) {
 
+view_hview[0] = view_hport[0] * 3
+
+view_wview[0] = view_wport[0] * 3
+
+
+} else {
+
+view_hview[0] = view_hport[0]
+
+view_wview[0] = view_wport[0]
+
+}
 //space drag
 
 //if speed &gt; 10 { speed = speed * .9 }

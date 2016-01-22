@@ -70,6 +70,9 @@
     <sprite>sprites\sprite48</sprite>
     <sprite>sprites\sprite57</sprite>
     <sprite>sprites\sprite56</sprite>
+    <sprite>sprites\sWallONE</sprite>
+    <sprite>sprites\sprite60</sprite>
+    <sprite>sprites\sStoneOne</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -162,6 +165,7 @@
     <object>objects\oBuyGas</object>
     <object>objects\oCoin</object>
     <object>objects\oWalltest</object>
+    <object>objects\oWall_new</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>
