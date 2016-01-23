@@ -67,7 +67,11 @@ direction = image_angle
 
 } else { ScDepth2() }
 
-if y &lt; 0 { room_goto(rSpace) }
+if y &lt; 0 {
+
+
+
+room_goto(rSpace) }
 
 
 </string>

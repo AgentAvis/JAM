@@ -33,6 +33,7 @@ global.plant = ceil(random_range(-1,1))
 if random(5) &gt; 1 {global.zombies = 0} else {global.zombies = 1}
 global.oFloorMakers = ceil(random(4))
 global.oFloorLimit = ceil( random_range( 400,800 ) )
+global.RockType = 1
 
 score = 500
 

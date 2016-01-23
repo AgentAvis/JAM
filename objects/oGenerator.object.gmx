@@ -38,6 +38,7 @@ if random(3) &lt; 1 {global.plant = 0} else {global.plant = 1}
 if random(5) &gt; 1 {global.zombies = 0} else {global.zombies = 1}
 global.oFloorMakers = ceil(random_range(-1,4))
 global.oFloorLimit = ceil( random_range( 300,800 ) )
+global.RockType = ceil(random_range(0,2))
 </string>
           </argument>
         </arguments>

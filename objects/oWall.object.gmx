@@ -28,6 +28,9 @@
             <string>//hsp = 0;
 //vsp = 0;
 
+//global.RockType = ceil(random_range(0,2))
+if global.RockType = 1 { sprite_index = sStoneTwo }
+
 image_yscale = -1
 
 ScDepth()
