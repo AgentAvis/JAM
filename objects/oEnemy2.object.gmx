@@ -29,6 +29,8 @@
 image_speed = .25
 //ScInitColor()
 Health = 3
+
+instance_destroy()
 </string>
           </argument>
         </arguments>

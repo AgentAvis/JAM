@@ -11,6 +11,8 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\Fuck</sprite>
+    <sprite>sprites\Parbage</sprite>
+    <sprite>sprites\Garbage</sprite>
     <sprite>sprites\sPlayer</sprite>
     <sprite>sprites\oPlayerZombie</sprite>
     <sprite>sprites\sprite50</sprite>
