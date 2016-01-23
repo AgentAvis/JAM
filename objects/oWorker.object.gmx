@@ -131,6 +131,40 @@ if keyboard_check(ord('R')) { Called = false }
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="oSolid">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy()
+
+// in collision event with whatever object...
+//var_dir = point_direction(x,y,other.x,other.y)
+//x = x+lengthdir_x(-1,var_dir)
+//y = y+lengthdir_y(-1,var_dir)
+
+//direction = point_direction(other.x,other.y,x,y)
+//motion_add( point_direction(x,y,other.x,other.y),.1)
+
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="oWorker">
       <action>
         <libid>1</libid>
@@ -167,40 +201,6 @@ y = y+lengthdir_y(-1,var_dir)
 
 
 
-
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="oSolid">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>instance_destroy()
-
-// in collision event with whatever object...
-//var_dir = point_direction(x,y,other.x,other.y)
-//x = x+lengthdir_x(-1,var_dir)
-//y = y+lengthdir_y(-1,var_dir)
-
-//direction = point_direction(other.x,other.y,x,y)
-//motion_add( point_direction(x,y,other.x,other.y),.1)
 
 
 
