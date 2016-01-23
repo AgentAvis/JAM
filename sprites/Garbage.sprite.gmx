@@ -17,8 +17,8 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>39</width>
-  <height>58</height>
+  <width>32</width>
+  <height>32</height>
   <frames>
     <frame index="0">images\Garbage_0.png</frame>
     <frame index="1">images\Garbage_1.png</frame>

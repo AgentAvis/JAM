@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>direction = random(360)
+if global.plant = 1 {} else {instance_destroy()}
 speed = 2
 ScInitColor3()
 image_speed = .25

@@ -76,6 +76,8 @@
     <sprite>sprites\sStoneTwo</sprite>
     <sprite>sprites\sprite60</sprite>
     <sprite>sprites\sStoneOne</sprite>
+    <sprite>sprites\sprite64</sprite>
+    <sprite>sprites\sprite65</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -104,11 +106,14 @@
     <script>scripts\ScDepth2.gml</script>
     <script>scripts\ScDeactivate.gml</script>
     <script>scripts\ScWalk.gml</script>
+    <script>scripts\instance_nth_nearest.gml</script>
+    <script>scripts\ScCollision.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
   </fonts>
   <objects name="objects">
+    <object>objects\oWorker</object>
     <object>objects\oPlayer</object>
     <object>objects\oWall_old</object>
     <object>objects\oPlayer_new</object>
@@ -169,6 +174,7 @@
     <object>objects\oCoin</object>
     <object>objects\oWalltest</object>
     <object>objects\oWall_new</object>
+    <object>objects\oCall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>

@@ -34,6 +34,7 @@ if random(5) &gt; 1 {global.zombies = 0} else {global.zombies = 1}
 global.oFloorMakers = ceil(random(4))
 global.oFloorLimit = ceil( random_range( 400,800 ) )
 global.RockType = 1
+global.debug = false
 
 score = 500
 
@@ -133,6 +134,8 @@ if oPlanets &gt; oPlanetamt {
 if room = rMenu {
 if instance_number(oAsteroid) &lt; 1 { x = random(room_width) y = random(room_height) instance_create(x,y,oAsteroid) }
 }
+
+if keyboard_check_pressed(ord('K')) { global.debug = !global.debug }
 
 
 
