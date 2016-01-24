@@ -37,6 +37,8 @@ thrown = false
 Airtime = 0
 
 Attk = 0
+
+Attacking = false
 </string>
           </argument>
         </arguments>
@@ -156,6 +158,7 @@ if Called = false and instance_exists(oEnemy1) {
     Buddy = instance_nearest(x,y,oEnemy1)
     if distance_to_object(Buddy) &lt; 200 {
         if thrown = false {
+        Attacking = true
         direction = point_direction(x,y,Buddy.x,Buddy.y)
         speed = 2
         image_speed = .25
@@ -167,10 +170,23 @@ if Called = false and instance_exists(oEnemy1) {
                 }
     
     }
- }
+ } else { Attacking = false }
     
     
 }
+}
+
+//Carrying
+
+if Called = false and instance_exists(oEnemy1Dead) {
+    Jose = instance_nearest(x,y,oEnemy1Dead)
+    if distance_to_object(Jose) &lt; 200 {
+        if thrown = false and Attacking = false {         
+            direction = point_direction(x,y,Jose.x,Jose.y)
+            speed = 2
+            image_speed = .25
+  }
+ }  
 }
 
 </string>

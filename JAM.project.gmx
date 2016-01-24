@@ -80,6 +80,7 @@
     <sprite>sprites\sPikminAirborne</sprite>
     <sprite>sprites\sprite65</sprite>
     <sprite>sprites\sprite67</sprite>
+    <sprite>sprites\sPlanet1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>

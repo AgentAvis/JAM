@@ -27,9 +27,11 @@
             <kind>1</kind>
             <string>//ScInitColor3()
 
-Weight = 1
+Weight = 2
 
 image_angle = 180
+
+Carrying = false
 </string>
           </argument>
         </arguments>
@@ -54,6 +56,7 @@ image_angle = 180
             <kind>1</kind>
             <string>ScDepth2()
 
+if Carrying &gt;= Weight { x += 1 }
 </string>
           </argument>
         </arguments>
