@@ -178,14 +178,12 @@ if Called = false and instance_exists(oEnemy1) {
 
 //Carrying
 
-if Called = false and instance_exists(oEnemy1Dead) {
+if Called = false and instance_exists(oEnemy1Dead) and thrown = false and Attacking = false {
     Jose = instance_nearest(x,y,oEnemy1Dead)
-    if distance_to_object(Jose) &lt; 200 {
-        if thrown = false and Attacking = false {         
+    if distance_to_object(Jose) &lt; 200 {          
             direction = point_direction(x,y,Jose.x,Jose.y)
             speed = 2
             image_speed = .25
-  }
  }  
 }
 
