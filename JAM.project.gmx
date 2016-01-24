@@ -76,8 +76,10 @@
     <sprite>sprites\sStoneTwo</sprite>
     <sprite>sprites\sprite60</sprite>
     <sprite>sprites\sStoneOne</sprite>
-    <sprite>sprites\sprite64</sprite>
+    <sprite>sprites\sPikmin</sprite>
+    <sprite>sprites\sPikminAirborne</sprite>
     <sprite>sprites\sprite65</sprite>
+    <sprite>sprites\sprite67</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -132,6 +134,7 @@
       <object>objects\oRock</object>
       <object>objects\oShipLanded</object>
       <object>objects\oEnemy1</object>
+      <object>objects\oEnemy1Dead</object>
       <object>objects\oWallMaker</object>
       <object>objects\oEnemy2</object>
       <object>objects\oTree</object>
@@ -175,6 +178,7 @@
     <object>objects\oWalltest</object>
     <object>objects\oWall_new</object>
     <object>objects\oCall</object>
+    <object>objects\oHitEffect</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>

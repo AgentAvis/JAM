@@ -64,16 +64,16 @@ Clip = 0
 
 speed = 0
 
-if keyboard_check( vk_shift ) { Walk = 7 Sprinting = true } else { Walk = 4 Sprinting = false}
+if keyboard_check( vk_shift ) { Walk = 5 Sprinting = true } else { Walk = 4 Sprinting = false}
 
 if instance_number(oPlayer) &gt; 1 { with ( instance_nearest(x,y,oPlayer) ) { instance_destroy() } }
 
 
 if instance_exists(oWallMaker) {
-visible = false
+    visible = false
 } else {
-visible = true
-ScWalk()
+    visible = true
+    ScWalk()
 }
 
 if Up or Down or Left or Right { if Sprinting = false {image_speed = .25} else {image_speed = .5} } else { image_speed = 0 }
@@ -106,10 +106,18 @@ if mouse_check_button_pressed(mb_left) {
     
         Throw = instance_nearest(x,y,oWorker)
         if distance_to_object(Throw) &lt; 25 {
-            with (Throw) { direction = point_direction(x,y,mouse_x,mouse_y) speed = 6 thrown = true }
-            
-            
-            
+            TarDis = distance_to_point(mouse_x,mouse_y)
+            if TarDis &gt; 400 { Tar = 400 } else { Tar = TarDis }
+            with (Throw) {
+                direction = point_direction(x,y,mouse_x,mouse_y)
+                speed = 10
+                thrown = true
+                Tar = other.Tar
+                Derp = point_direction(x,y,mouse_x,mouse_y)
+                TargetX = x + lengthdir_y(Tar,Derp)
+                TargetY = y + lengthdir_y(Tar,Derp)  
+                if Tar &lt; 400 { TargetX = mouse_x TargetY = mouse_y } else { TargetX = global.X TargetY = global.Y }        
+            }
             
         }
     
