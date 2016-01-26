@@ -81,10 +81,10 @@ if thrown = true {
     if distance_to_point(TargetX,TargetY) &lt; 8 { speed = 0 thrown = false Airtime = 0 }
     
     Called = false
-    //if speed &gt; 1.25 { speed -= .1 } else { thrown = false }
-    
-    //speed = 7.5 
-    //(.1 * room_speed) = 6
+            //if speed &gt; 1.25 { speed -= .1 } else { thrown = false }
+            
+            //speed = 7.5 
+            //(.1 * room_speed) = 6
     
     
     
@@ -154,8 +154,8 @@ if keyboard_check(ord('R')) { Called = false }
 
 if Attk &lt; room_speed * .25 { Attk += 1 }
 
-if Called = false and instance_exists(oEnemy1) {
-    Buddy = instance_nearest(x,y,oEnemy1)
+if Called = false and instance_exists(oEnemyParent) {
+    Buddy = instance_nearest(x,y,oEnemyParent)
     if distance_to_object(Buddy) &lt; 200 {
         if thrown = false {
         Attacking = true
@@ -177,6 +177,8 @@ if Called = false and instance_exists(oEnemy1) {
 }
 
 //Carrying
+
+/* //removed because it was useless
 
 if Called = false and instance_exists(oEnemy1Dead) and thrown = false and Attacking = false {
     Jose = instance_nearest(x,y,oEnemy1Dead)
