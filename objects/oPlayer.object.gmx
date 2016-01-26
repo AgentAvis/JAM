@@ -36,6 +36,8 @@ Left = false
 Right = false
 HoldingGun = false
 Clip = 0
+Stomach = 1
+
 
 //ScArm()
 </string>
@@ -95,9 +97,29 @@ if HoldingGun = false {
 
 }
 
-if keyboard_check(vk_space) { instance_create(x,y,oWorker) }
+// eating/babies (not eating babies)
+food = instance_nearest(x,y,oDead)
+if place_meeting(x,y,food) { Stomach += 2 with (food) { instance_destroy() } }
+
+if keyboard_check(vk_space) and Stomach &gt; 0 { instance_create(x,y,oWorker) Stomach -= 1 }
 
 if mouse_check_button_pressed(mb_right) { instance_create(mouse_x,mouse_y,oCall) }
+
+//eat your children
+
+Children = instance_nearest(x,y,oWorker) 
+
+if distance_to_object(Children) &lt; 40 and keyboard_check(ord('X')) { 
+
+    with (Children) { instance_destroy() }    
+    
+    Stomach += 1
+
+}
+
+//make sure i always have a baby
+
+if Stomach &lt; 1 and instance_number(oWorker) &lt; 1 { Stomach += 1 }
 
 //throwing
 
@@ -123,6 +145,7 @@ if mouse_check_button_pressed(mb_left) {
     
     }
 }
+
 
 
 

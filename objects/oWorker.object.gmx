@@ -184,6 +184,7 @@ if Called = false and instance_exists(oEnemy1Dead) and thrown = false and Attack
             direction = point_direction(x,y,Jose.x,Jose.y)
             speed = 2
             image_speed = .25
+            if distance_to_object(Jose) &lt; 10 { x = Jose.x y = Jose.y }  
  }  
 }
 

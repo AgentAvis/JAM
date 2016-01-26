@@ -137,6 +137,7 @@
       <object>objects\oShipLanded</object>
       <object>objects\oGrid</object>
       <object>objects\oEnemy1</object>
+      <object>objects\oDead</object>
       <object>objects\oEnemy1Dead</object>
       <object>objects\oWallMaker</object>
       <object>objects\oEnemy2</object>
@@ -185,11 +186,12 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>
-    <room>rooms\room0</room>
     <room>rooms\rSpace</room>
     <room>rooms\rPlanet</room>
     <room>rooms\rStation</room>
     <room>rooms\FuelStore</room>
+    <room>rooms\room0</room>
+    <room>rooms\room6</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

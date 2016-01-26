@@ -53,7 +53,8 @@ if instance_exists(oPlayer) { with (oPlayer) { visible = true x = other.x y = ot
           <argument>
             <kind>1</kind>
             <string>if Landed = true and place_meeting(x,y,oPlayer) and keyboard_check_pressed(ord('E')){ 
-Landed = false        
+Landed = false
+with (oPlayer) { Stomach += instance_number(oWorker) with (oWorker) { instance_destroy() } }
 }
 
 if Landed = false {

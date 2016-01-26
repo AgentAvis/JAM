@@ -48,6 +48,7 @@ Rotation = ceil(random(4))
 //if Rotation = 3 { image_angle = Angle + 180 }
 //if Rotation = 4 { image_angle = Angle + 270 }
 
+if place_meeting(x,y,oWater) { instance_destroy() }
 
 Health = 30
 

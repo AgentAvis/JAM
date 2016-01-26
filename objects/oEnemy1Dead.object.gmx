@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>oDead</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -39,7 +39,7 @@ image_speed = 0
 
 //Create the path
 
-path = path_add()
+//path = path_add()
 
 //remember to remove the path when done
 </string>
@@ -66,22 +66,27 @@ path = path_add()
             <kind>1</kind>
             <string>ScDepth2()
 
-if instance_number_within_distance(oWorker,20) &gt; Weight { Carrying = true } else { Carrying = false }
+if instance_number_within_distance(oWorker,10) &gt; Weight { Carrying = true } else { Carrying = false }
 
+Speed = 2.5
 
 if Carrying = true {
+
+    speed = Speed
+    
+    if (ScCanSee(oPlayer)) { direction = point_direction(x,y,oPlayer.x,oPlayer.y) }
 
     //direction = point_direction(x,y,oShipLanded.x,oShipLanded.y)
     //speed = 2
 
     //pathfinding
     
-    var Ex = (oShipLanded.x div 64) * 64 + 32;
-    var Ey = (oShipLanded.y div 64) * 64 + 32;
+    //var Ex = (oShipLanded.x div 64) * 64 + 32;
+    //var Ey = (oShipLanded.y div 64) * 64 + 32;
     
-    if (mp_grid_path(global.grid ,path ,x ,y ,Ex ,Ey ,1 )) {
-        path_start(path,1,path_action_stop,false);
-    }
+    //if (mp_grid_path(global.grid ,path ,x ,y ,Ex ,Ey ,1 )) {
+    //    path_start(path,1,path_action_stop,false);
+    //}
     
 } else { speed = 0 }
 

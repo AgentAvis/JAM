@@ -173,6 +173,7 @@ why = oShip.y
 RoomSize = (room_width + room_height) / 2
 
 draw_set_color(c_white);
+/*
 //draw_set_halign(fa_center)
 draw_text(ex,why + 15,"Planets: "+string(oPlanets))
 draw_text(ex,why + 30,"Suns: "+string(oSuns))
