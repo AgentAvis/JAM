@@ -74,17 +74,30 @@ if Health &lt; 0 { instance_destroy() instance_create(x,y,oEnemy1Dead) }
 
 if Sleep = true {
 
-sprite_index = sSleepyEnemy2
-speed = 0
+    sprite_index = sSleepyEnemy2
+    speed = 0
+    
+    if instance_exists(oWorker) {
+    
+        Worker = instance_nearest(x,y,oWorker)
+    
+        if distance_to_object(oWorker) &lt; 75 { Sleep = false }
+    
+    }
 
-if instance_exists(oWorker) {
+} else {
 
-Worker = instance_nearest(x,y,oWorker)
-
-if distance_to_object(oWorker) &lt; 75 { Sleep = false }
+    sprite_index = sAngryEnemy2
 
 
-}
+
+
+
+
+
+
+
+
 
 }
 </string>
