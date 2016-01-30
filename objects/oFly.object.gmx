@@ -31,7 +31,7 @@ Speed = 3
 //ScInitColor3()
 image_speed = .25
 depth = -(room_width + room_width ) / 2
-Health = 1
+Health = .5
 </string>
           </argument>
         </arguments>

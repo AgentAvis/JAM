@@ -88,13 +88,15 @@ if Sleep = true {
 } else {
 
     sprite_index = sAngryEnemy2
-
-
-
-
-
-
-
+    speed = Speed
+    
+    if instance_exists(oWorker) {
+    
+        Worker = instance_nearest(x,y,oWorker)
+    
+        if distance_to_object(oWorker) &gt; 100 { Sleep = true }
+    
+    }    
 
 
 

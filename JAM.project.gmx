@@ -119,6 +119,7 @@
     <script>scripts\instance_nth_nearest.gml</script>
     <script>scripts\ScCollision.gml</script>
     <script>scripts\instance_number_within_distance.gml</script>
+    <script>scripts\ScHunt.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>

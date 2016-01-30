@@ -39,6 +39,8 @@ Airtime = 0
 Attk = 0
 
 Attacking = false
+
+Speed = 2
 </string>
           </argument>
         </arguments>
@@ -92,7 +94,7 @@ if thrown = true {
     
      //collision
     
-    if distance_to_object(instance_nearest(x,y,oSolid)) &lt; 10 {
+    if distance_to_object(instance_nearest(x,y,oSolid)) &lt; 16 {
         if place_meeting(x + hspeed,y,oSolid) { x -=hspeed; hspeed = 0 }
         if place_meeting(x - hspeed,y,oSolid) { x +=hspeed; hspeed = 0 }
         if place_meeting(x ,y + vspeed,oSolid) { y -=vspeed; vspeed = 0 }
@@ -154,7 +156,25 @@ if keyboard_check(ord('R')) { Called = false }
 
 if Attk &lt; room_speed * .25 { Attk += 1 }
 
-if Called = false and instance_exists(oEnemyParent) {
+if Called = false and instance_exists(oEnemyParent) and thrown = false {
+    
+        ScHunt(oEnemyParent,200)
+        if instance_exists(Target) and (Target &amp;&amp; mdist&lt;500){
+
+                direction = point_direction(x,y,Target.x,Target.y)
+                Attacking = true
+                speed = Speed
+                image_speed = .25
+                if Attk &gt; room_speed * .24 {
+                    if place_meeting(x,y,Target) {
+                        with ( Target ) { Health -= 1 }
+                        Attk = 0
+                        instance_create(x,y,oHitEffect)
+                        //Play Hit Sound
+                        }
+}
+}
+/*
     Buddy = instance_nearest(x,y,oEnemyParent)
     if distance_to_object(Buddy) &lt; 200 {
         if thrown = false {
@@ -174,6 +194,8 @@ if Called = false and instance_exists(oEnemyParent) {
     
     
 }
+*/
+
 }
 
 //Carrying
