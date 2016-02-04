@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>oEnemyParent</parentName>
+  <parentName>oDead</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,18 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//direction = random(360)
-if global.Enemy2s = 1 {} else {instance_destroy()}
-//speed = 2
-ScInitColor3()
+            <string>//ScInitColor3()
+
+Weight = 2
+
+image_angle = 180
+
+Carrying = false
+
 image_speed = 0
-depth = -(room_width + room_width ) / 2
-Health = 5
-Sleep = true
 
-Speed = 1.5
+//pathfinding
 
-Attk = 0
+//Create the path
+
+//path = path_add()
+
+//remember to remove the path when done
 </string>
           </argument>
         </arguments>
@@ -60,73 +65,31 @@ Attk = 0
           <argument>
             <kind>1</kind>
             <string>ScDepth2()
-if instance_exists(oWallMaker) {speed = 0} else { speed = 2 }
 
-//ScBouncing5()
+if instance_number_within_distance(oWorker,10) &gt; Weight { Carrying = true } else { Carrying = false }
 
-if place_meeting(x+hspeed, y+vspeed, oSolid) {
-    move_bounce_all(true)
-    speed = speed * .75
-    Bounced = true
-}
+Speed = 2.5
 
-direction += random_range(-10,10)
+if Carrying = true {
 
-//death
-
-if Health &lt; 0 { instance_destroy() instance_create(x,y,oEnemy2Dead) }
-
-//sleepy
-
-if Sleep = true {
-
-    sprite_index = sSleepyEnemy2
-    speed = 0
-    
-    if instance_exists(oWorker) {
-    
-        Worker = instance_nearest(x,y,oWorker)
-    
-        if distance_to_object(oWorker) &lt; 75 { Sleep = false }
-    
-    }
-
-} else {
-
-    sprite_index = sAngryEnemy2
     speed = Speed
     
-    if Attk &lt; room_speed { Attk += 1 }
+    if (ScCanSee(oPlayer)) { direction = point_direction(x,y,oPlayer.x,oPlayer.y) }
+
+    //direction = point_direction(x,y,oShipLanded.x,oShipLanded.y)
+    //speed = 2
+
+    //pathfinding
     
-    if instance_exists(oWorker) {
+    //var Ex = (oShipLanded.x div 64) * 64 + 32;
+    //var Ey = (oShipLanded.y div 64) * 64 + 32;
     
-        ScHunt(oWorker,100)
-        if instance_exists(Target) and (Target &amp;&amp; mdist&lt;500){
-
-                direction = point_direction(x,y,Target.x,Target.y)
-                Attacking = true
-                speed = Speed
-                image_speed = .25
-                if Attk &gt; room_speed - 1 {
-                    if place_meeting(x,y,Target) {
-                        with ( Target ) { instance_destroy() /* play death sound */ }
-                        Attk = 0
-                        instance_create(x,y,oBiteEffect)
-                        //Play Hit Sound
-                        }
-}
-}
-        
-        Worker = instance_nearest(x,y,oWorker)
-        
-         if instance_exists(Worker) { if distance_to_object(Worker) &lt; 100 and instance_exists(oWorker) {} else { Sleep = true } }
+    //if (mp_grid_path(global.grid ,path ,x ,y ,Ex ,Ey ,1 )) {
+    //    path_start(path,1,path_action_stop,false);
+    //}
     
-    }    
+} else { speed = 0 }
 
-
-
-
-}
 </string>
           </argument>
         </arguments>
@@ -155,6 +118,32 @@ var_dir = point_direction(x,y,other.x,other.y)
 x = x+lengthdir_x(-1,var_dir)
 y = y+lengthdir_y(-1,var_dir)
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self()
+
+if (global.debug){draw_circle(x,y,10,true)}
+
 </string>
           </argument>
         </arguments>

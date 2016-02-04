@@ -39,8 +39,8 @@ if random(5) &gt; 1 {global.zombies = 0} else {global.zombies = 1}
 global.oFloorMakers = ceil(random_range(-1,2))
 global.oFloorLimit = ceil( random_range( 75,500 ) )
 global.RockType = ceil(random_range(0,2))
-if random(4) &gt; 1 { global.SporeThings = false } else { global.SporeThings = true }
-if random(4) &gt; 1 { global.Enemy2s = 0 } else { global.Enemy2s = 1 }
+if random(3) &gt; 1 { global.SporeThings = false } else { global.SporeThings = true }
+if random(3) &gt; 1 { global.Enemy2s = 0 } else { global.Enemy2s = 1 }
 
 </string>
           </argument>

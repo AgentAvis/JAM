@@ -41,6 +41,7 @@ if Rotation = 4 { image_angle = Angle + 270 }
 if random(5) &lt; 1 { instance_create(x,y,oTree) }
 if random(5) &lt; 1 { instance_create(x,y,oRock) }
 if random(15) &lt; 1 { instance_create(x,y,oSporeThing) }
+if random(15) &lt; 1 { instance_create(x,y,oSporeThing2) }
 if random(30) &lt; 1 { instance_create(x,y,oEnemy1) }
 if random(40) &lt; 1 { instance_create(x,y,oEnemy2) }
 ScInitColor()

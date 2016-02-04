@@ -55,6 +55,8 @@ Lazers = 0
           <argument>
             <kind>1</kind>
             <string>
+/*
+
 if instance_exists(oPlayer) {
 //image_angle = point_direction(x,y,oPlayer.x,oPlayer.y)
 //arc_of_sight(x,y,dir,range,angle,objToLookFor,objToIgnore)

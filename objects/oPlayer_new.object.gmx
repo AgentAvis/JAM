@@ -35,6 +35,7 @@ image_speed = .25;
 global.Armed = false
 key_down = 0;
 
+/*
 // Create player's hand
 instance_create(x,y,oHand);
 </string>
@@ -71,9 +72,9 @@ airborne = !(vsp == 0);
 if (pointerDir &gt; 90 &amp;&amp; pointerDir &lt; 270) image_xscale = -1;
 else image_xscale = 1;
 
-if (airborne) image_index = sPlayerAirborn;
-else if (walking) sprite_index = sPlayerWalking;
-else sprite_index = sPlayerIdle;
+//if (airborne) image_index = sPlayerAirborn;
+//else if (walking) sprite_index = sPlayerWalking;
+//else sprite_index = sPlayerIdle;
 
 // Player Colliding With Things
 key_right = keyboard_check(ord('D'));

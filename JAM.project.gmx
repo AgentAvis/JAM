@@ -88,6 +88,8 @@
     <sprite>sprites\sprite73</sprite>
     <sprite>sprites\sAngryEnemy2</sprite>
     <sprite>sprites\sSleepyEnemy2</sprite>
+    <sprite>sprites\sJelly1</sprite>
+    <sprite>sprites\sJelly2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -149,9 +151,11 @@
       <object>objects\oEnemy2</object>
       <object>objects\oFly</object>
       <object>objects\oSporeThing</object>
+      <object>objects\oSporeThing2</object>
       <object>objects\oSporeThingDead</object>
       <object>objects\oDead</object>
       <object>objects\oEnemy1Dead</object>
+      <object>objects\oEnemy2Dead</object>
       <object>objects\oWallMaker</object>
       <object>objects\oEnemy999</object>
       <object>objects\oTree</object>
@@ -196,17 +200,17 @@
     <object>objects\oWall_new</object>
     <object>objects\oCall</object>
     <object>objects\oHitEffect</object>
-    <object>objects\sBiteEffect</object>
+    <object>objects\oBiteEffect</object>
     <object>objects\oIckySpores</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rMenu</room>
-    <room>rooms\room0</room>
     <room>rooms\rSpace</room>
     <room>rooms\rPlanet</room>
     <room>rooms\rStation</room>
     <room>rooms\FuelStore</room>
     <room>rooms\room6</room>
+    <room>rooms\room0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

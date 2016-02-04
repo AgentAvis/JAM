@@ -33,6 +33,7 @@ ScInitColor3()
 image_speed = 0
 depth = -(room_width + room_width ) / 2
 Health = 10
+Open = false
 </string>
           </argument>
         </arguments>
