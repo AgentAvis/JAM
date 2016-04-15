@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>Timerr = 0
+
+global.gen = true
+
 global.hue = random(255)
 global.hue2 = global.hue
 global.sat = random(255)
@@ -92,12 +95,43 @@ Timerr = 0
 
 //spawn planets if they arent already there
 if room = rSpace {
+    
+    if global.gen {
+        
+        global.gen = false
+        oPlanetamt = ceil(room_width * .1) / 20
+        oAsteroidamt = ceil(room_width * .05) / 20
+        oSunamt = ceil(room_width * .025) / 20
+        oStationamt = ceil(room_width * .075) / 20
+        
+            amt = oPlanetamt
+            if amt &gt; 0 {
+                repeat (amt) {
+                    oPlanets += 1
+                    instance_create(random(room_width),random(room_width),oPlanet)
+                }
+            }
+        
+        
+            amt = oAsteroidamt
+            if amt &gt; 0 {
+                repeat (amt) {
+                    oAsteroids += 1
+                    instance_create(random(room_width),random(room_width),oAsteroid)
+                }
+            }
+        
+        
+            amt = oSunamt
+            if amt &gt; 0 {
+                repeat (amt) {
+                    oSuns += 1
+                    instance_create(random(room_width),random(room_width),oSun)
+                }
+            }
+}
 
-oPlanetamt = 60 * 10 * 4
-oAsteroidamt = 40 * 10 * 4
-oSunamt = 9 * 10 * 4
-oStationamt = 20 * 10 * 4
-
+/*
 if oPlanets &lt; oPlanetamt { x = random(room_width) y = random(room_height) instance_create(x,y,oPlanet) oPlanets += 1 cats += 1 } else {
 if oStations &lt; oStationamt { x = random(room_width) y = random(room_height) instance_create(x,y,oStation) oStations += 1 } else {
 if oSuns &lt; oSunamt { x = random(room_width) y = random(room_height) instance_create(x,y,oSun) oSuns += 1 } else {

@@ -110,6 +110,7 @@ view_wview[0] = view_wport[0]
 Planet = instance_place(x,y,oPlanet)
 
 if instance_exists(Planet) and keyboard_check_pressed(ord('E')) {
+global.PlanID = (Planet.x + planet.y) / 2
 speed = 0
 with (Planet) { instance_change(oPlanetExplored,true) }
 room_goto(rPlanet)

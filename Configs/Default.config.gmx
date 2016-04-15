@@ -292,6 +292,7 @@
     <option_ios_icon_120>Configs\Default\ios\icons\icon120.png</option_ios_icon_120>
     <option_ios_icon_144>Configs\Default\ios\icons\icon144.png</option_ios_icon_144>
     <option_ios_icon_152>Configs\Default\ios\icons\icon152.png</option_ios_icon_152>
+    <option_ios_icon_167>Configs\Default\ios\icons\icon167.png</option_ios_icon_167>
     <option_ios_icon_57>Configs\Default\ios\icons\icon57.png</option_ios_icon_57>
     <option_ios_icon_72>Configs\Default\ios\icons\icon72.png</option_ios_icon_72>
     <option_ios_icon_76>Configs\Default\ios\icons\icon76.png</option_ios_icon_76>
@@ -535,7 +536,7 @@
     <option_winUAP_wide_logo>Configs\Default\WindowsUAP\logos\WideLogo.scale-100.png</option_winUAP_wide_logo>
     <option_windowcolor>clBlack</option_windowcolor>
     <option_windows_alternate_sync_method>False</option_windows_alternate_sync_method>
-    <option_windows_build_version>7</option_windows_build_version>
+    <option_windows_build_version>8</option_windows_build_version>
     <option_windows_company_info></option_windows_company_info>
     <option_windows_copyright_info></option_windows_copyright_info>
     <option_windows_create_textures_on_demand>False</option_windows_create_textures_on_demand>
